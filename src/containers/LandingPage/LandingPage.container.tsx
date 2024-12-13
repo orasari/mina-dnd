@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { Container, StyledButton, Title } from './LandingPage.styles.tsx';
+import { Container, StyledButton, Title } from './LandingPage.styles';
 
 // Define props for the component (extend as needed)
 export interface LandingPageProps {
