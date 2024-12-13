@@ -1,3 +1,7 @@
+export type StoreType = {
+  board: BoardDataType
+}
+
 export type BoardDataType = {
     columns: string[];
     tasks: TasksType

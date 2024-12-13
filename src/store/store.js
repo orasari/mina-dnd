@@ -3,7 +3,7 @@ import taskReducer from '@/reducers/boardReducer';
 
 const store = configureStore({
     reducer: {
-        tasks: taskReducer
+        board: taskReducer
     }
 });
 

@@ -1,16 +1,17 @@
 import { GET_TASKS_AND_COLUMNS } from '@/graphql/tasksQueries';
 import { setBoardData } from '@/reducers/boardReducer';
 import { Board, Column, ColumnTitle, TaskCard } from './Board.styles';
-import { BoardDataType, TasksType, TaskType } from '@/Types/BoardTypes';
+import { BoardDataType, StoreType, TasksType, TaskType } from '@/Types/BoardTypes';
 import { useQuery } from '@apollo/client';
 import { useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { useSelector, useDispatch } from 'react-redux';
 
+
 export default function BoardComponent() {
     const { data } = useQuery<BoardDataType>(GET_TASKS_AND_COLUMNS);
     const dispatch = useDispatch();
-    const boardData = useSelector(state => state.tasks);
+    const boardData: BoardDataType = useSelector((state: StoreType) => state.board);
 
     useEffect(() => {
         if (data && !boardData.tasks) {
