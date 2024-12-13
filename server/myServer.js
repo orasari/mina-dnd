@@ -36,5 +36,5 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 // Start the server
 server.listen().then(({ url }) => {
-  console.log(`Server running at ${url}`);
+  console.log(`Server running at this ${url}`);
 });
