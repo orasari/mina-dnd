@@ -25,10 +25,12 @@ export default function Layout({ children }) {
 
     return (
       <ThemeProvider theme={lightTheme}>
-        <Header isHidden={isHidden}>
-            <LinkStyled href="/">Home</LinkStyled>
-            <LinkStyled href="/login">Login</LinkStyled>
-            <LinkStyled href="/board">Board</LinkStyled>
+        <Header
+        // @ts-ignore 
+          isHidden={isHidden}>
+          <LinkStyled href="/">Home</LinkStyled>
+          <LinkStyled href="/login">Login</LinkStyled>
+          <LinkStyled href="/board">Board</LinkStyled>
         </Header>
         <Container>
           {children}
