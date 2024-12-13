@@ -1,0 +1,3 @@
+export const UPDATE_TASK_POSITION = 'UPDATE_TASK_POSITION';
+export const SET_TASK = 'SET_TASK';
+export const SET_BOARD_DATA = 'SET_BOARD_DATA';
