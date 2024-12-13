@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import LandingPage from '../containers/LandingPage/LandingPage.container.tsx';
 import backgroundImage from '../assets/images/landing.png';
+import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <LandingPage backgroundImage={backgroundImage}/>
+        <StyledComponentsRegistry>
+          <LandingPage backgroundImage={backgroundImage}/>
+        </StyledComponentsRegistry>
       </main>
     </div>
   );
